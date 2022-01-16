@@ -18,7 +18,8 @@
   <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
 </head>
 <body>
-  <!--<?php
+  <!--
+<?php
     $genEr="";
     if($_POST["submitCon"]){
       $emailCon=$_POST["emailCon"];
@@ -43,7 +44,8 @@
     function check($var){
       return trim(stripslashes(htmlspecialchars($var)));
     }
-     ?>-->
+     ?>
+-->
      <div class="gen">
        <div class="topSect"><span class="top"><div id="left" class=""><p id="title" class="" onclick="window.location.href='index.html'">SHOS</p></div>
        <div id="right"><p class="menu">&#8595;</p></div></span>
