@@ -1,0 +1,182 @@
+#backImg{
+  min-height: 300px;
+  position: relative;
+  background: url("images/sibPiggy.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  height:calc(100vh - 80px);
+  width:100%;
+  z-index:1;
+}
+
+.circle{
+  background-color: transparent;
+  width:95%;
+  height: 10px;
+  position: relative;
+  display: flex;
+  left:0px;
+  right:0px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  z-index:10;
+  margin-top: -100px;
+  margin-bottom:90px;
+}
+
+#arrow{
+  margin-top:-75px;
+  color:white;
+  font-size:35px;
+  font-family: quicksand;
+  width:80%;
+  text-align:center;
+}
+
+.circ{
+  display: none;
+  border-radius:50%;
+  background-color: rgba(22,36,80,1);
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  padding:20px;
+}
+
+#arrowDown{
+  position: absolute;
+  color:rgba(138,36,16,1);
+  font-size: 35px;
+  margin-left:-9.5px;
+  top:130px;
+}
+
+.circImg{
+  position: relative;
+  width: 80%;
+  height:80%;
+  object-fit: contain;
+}
+
+#centerTxt{
+  margin-top:-120px;
+  max-width:80%;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.redBox{height:300px;}
+
+.redBox{
+width:100%;
+background-color:rgba(32,56,100,1);
+justify-content: center;
+min-height:150px;
+height: auto;
+margin-top: 160px;
+padding-top:20px;
+padding-bottom:20px;
+}
+
+.noDisp{
+  display: none;
+  margin-top: 0px;
+}
+
+.circ{
+margin:40px auto;
+display: flex;}
+
+#genLine3{display: none; height: 0px;}
+
+#arrowDown{display: none; top:0px;}
+
+#nav2{display: none;}
+
+.summary{
+  width: 80%;
+  margin:80px auto;
+  left:0px;right: 0px;
+}
+
+.summaryText{
+  font-family: Quicksand;
+  font-size:16px;
+}
+
+.noDispOpposite{
+  display: block;
+}
+
+@media only screen and (min-width: 430px){
+  .circle{
+    background-color:rgba(240,190,113,1);
+    width:85%;}
+
+  .front{
+    padding: 60px;}
+
+  #centerTxt{
+    margin-top:0px;}
+}
+
+@media only screen and (min-width: 600px){
+  .summaryText{
+    font-size:18px;
+  }
+}
+
+@media only screen and (min-width: 850px){
+  .summaryText{
+    font-size:19px;
+  }
+  .summary{
+    margin:100px auto;
+  }
+
+  .circle{
+    width:65%;}
+
+  .redBox{
+  display: flex;}
+
+  .genLine{
+    top:200px;
+  }
+
+
+  #backImg{
+    margin-top:-200px;
+    height:calc(100vh - 50px);
+    width:100%;
+    z-index:1;
+  }
+
+  .noDispOpposite{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1000px){
+      .circle{
+        width:50%;}
+}
+
+@media only screen and (min-height: 900px){
+
+#arrow{
+  font-size:40px;}
+
+.circle{
+  margin-top:-250px;
+  margin-bottom:230px;
+  }
+
+
+}

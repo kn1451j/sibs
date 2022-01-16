@@ -1,0 +1,173 @@
+#backPhotoMem{
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover !important;
+  background:url("images/boyssky.jpg");
+  height:100%;
+  width:110%;
+  top:0px;
+  left: 0px;
+}
+
+#photoCont{
+  position: relative;
+  overflow: hidden;
+  width:100%;
+  height:auto;
+}
+
+#intro{
+    width:80%;
+    height:auto;
+    z-index: 115;
+    position:relative;
+    margin: 60px auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,.5);
+}
+
+
+
+#whyCont{
+  padding: 30px;
+  position: relative;
+  height:auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#whyBlock{
+  max-width: 400px;
+  padding: 0px;
+}
+
+.listTitle{
+    font-size:25px;
+    font-family: Raleway;
+    color:white;
+    text-align:center;
+}
+
+.listItem{
+  font-size:20px;
+  color:white;
+  font-family: Raleway;
+}
+
+.loginRow{
+  min-width:100px;
+  width: 100%;
+  height: 75px;
+}
+
+.submitButton{
+  display: flex;
+  justify-content: center;
+  background-color:rgba(240,190,113,1);
+  font-size:17.5px;
+  padding:0px;
+  align-items: center;
+  margin-top:35px;
+  height:50px;
+  color:white;
+  cursor:pointer;
+  border: none;
+  font-size: 18px;
+  font-family: Quicksand,serif;
+  overflow: hidden;
+  box-shadow:7.5px 10px 10px 0px rgba(0, 0, 0, 0.3);
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  min-width:100px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.passwordButton{
+  background-color:transparent;
+  margin:10px;
+  margin-bottom: -20px;
+  box-shadow: 7.5px 10px 10px 0px rgba(0, 0, 0, 0);
+}
+
+.smallRow{
+  height: 0px;
+}
+
+.submitButton:hover{
+    background-color:rgba(230,170,93,1);
+}
+
+.passwordButton:hover{
+  background-color:transparent;
+}
+
+label{
+  font-family: Quicksand,seri;
+  color: white;
+  font-size:15px;
+}
+
+#logTitle{
+  width: 100%;
+  padding: 0px;
+}
+
+.statusForm{
+  color:white;
+  font-family: Quicksand;
+  font-size:15px;
+  margin:0px;
+  padding:0px;
+  text-align: center;
+  min-width: 100px;
+  width: 100%;
+}
+
+
+@media only screen and (min-width: 850px){
+  #backPhotoMem{
+    background:url("images/childrenHug.jpg");}
+
+  #introCont{
+    display: inline-flex;
+  }
+
+  #whyCont{
+    padding: 20px;
+    padding-bottom: 40px;
+    padding-left:80px;
+    padding-right:80px;
+    position: relative;
+    top:0px;bottom:0px;right:0px;left: 0px;
+    margin: auto;
+  }
+
+  #whyBlock{
+    max-width: none;
+  }
+
+  .insideForm{
+      width:auto;
+      display: block;
+      align-items: center;
+  }
+
+
+  label{
+    font-family: Quicksand,serif !important;
+    color: white;
+    font-size:15px;
+  }
+
+  #logTitle{
+    text-align: center;
+    width: 100%;
+    margin:5px;
+  }
+
+}

@@ -1,0 +1,95 @@
+#introCont{
+  position: relative;
+  width: 100%;
+}
+
+.insideForm{
+    width:100%;
+    margin:auto;
+    left:0px;right: 0px;
+    align-items: center;
+}
+
+.loginRowButton{
+  display: flex;
+  justify-content: center;
+  min-width:100px;
+  width: 100%;
+  height: 75px;
+}
+
+.input{
+  width: 100%;
+}
+
+.loginTable{
+  position: relative;
+  display:block;
+  z-index:115;
+  padding: 50px 10px;
+}
+
+.listItem{
+  overflow: auto;
+}
+
+.redButton{
+}
+
+.redButton:hover{
+}
+
+.changePass{
+  height: auto;
+}
+
+.blockForm{
+  min-width: 100px;
+  width: 100%;
+  max-width: 250px;
+  margin: auto;
+}
+
+.check{
+  width: auto;
+}
+
+
+@media only screen and (min-width: 850px){
+
+  .insideForm{
+      width:50%;}
+
+  .loginRow{
+    width:100%;
+    height: 75px;
+  }
+
+  .loginTable{
+    position: relative;
+    display:inline-block;
+    margin:60px;
+    width:100%;
+  }
+
+  .flexForm{
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+  }
+
+  .blockForm{
+    padding:20px;
+    display: block;
+    width:100%;
+  }
+  }
+
+  .adminOnly{
+    display: none;
+  }
+
+  .adminOnlyadmin{
+    display: flex;
+  }

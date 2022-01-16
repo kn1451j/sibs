@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Forgot Password</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald|Pontano+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="general.css" type="text/css">
+    <link rel="stylesheet" href="form.css" type="text/css">
+  <link rel="stylesheet" href="sign.css" type="text/css">
+  <meta name="description" content="A social network for those who have family with special needs looking for support and resources from others in similar situations. Siblings Helping Other Siblings is a non-profit organization that seeks to connect people and create
+    a more aware and knowledgable community. Although the website was specifically made with those who have special needs family members in mind, anyone interested in creating a support network is welcome to join and participate.">
+  <meta name="keywords" content="siblings, family, siblings helping other siblings, SHOS, special needs, disabilities, disability, brother, sister, family help, care, family care, community">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
+  <style>
+
+      .submitButton{
+        margin-top:0px;
+      }
+
+      @media only screen and (min-width: 850px){
+        .submitButton{
+          margin-top:10px;
+        }
+      }
+
+  </style>
+</head>
+<body>
+  <?php
+      $server = "localhost";
+      $username = "u640129124_admin";
+      $password= "accessDataAdmin";
+      $db = "u640129124_LaurenDatabase";
+
+      $connection = new mysqli($server,$username,$password, $db);
+      if($connection->connect_error){
+        die("Connection Failed");
+      }
+
+      $formStatus="";
+
+      if(isset($_POST["password"])){
+        $email=$_POST["email"];
+        if(empty($email)){
+          $formStatus="Please fill out all fields";}
+        else{
+          $email=filter_var($email,FILTER_SANITIZE_EMAIL);
+          if(filter_var($email,FILTER_VALIDATE_EMAIL)==false){
+            $formStatus="Please enter a valid email address";
+          }
+          else{
+            $counter=0;
+            $result=$connection->query("SELECT id FROM memberContact WHERE email='$email'");
+            while($row=$result->fetch_row()){
+              $counter=1;
+              $id=$row[0];
+              $emailRes=$connection->query("SELECT user FROM memberLogin WHERE id='$id'");
+              while($emailRow=$emailRes->fetch_row()){
+                $newPass= substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyz"),0,10);
+                mail($email,"New Password SHOS","You requested a password change for the Siblings Helping Other Siblings tied to the username ". $emailRow[0] .". If you did not request a password change, please contact us immediately. Your temporary password is " . $newPass,"From: SHOS<laurencowell042502@gmail.com>");
+                $formStatus="Please check your email address.";
+
+                $newPass=password_hash($newPass,PASSWORD_DEFAULT);
+                $login = "UPDATE memberLogin SET pass='$newPass' WHERE user='$emailRow[0]'";
+
+                if ($connection->query($login) === TRUE) {
+                echo "<script> window.location.href='members.php'
+                 </script>";}
+              }
+            }
+
+            if($counter==0 and !$logged){
+              $formStatus="Account does not exist.";
+            }
+          }
+        }
+      }
+
+      function clean($data){
+        $data=trim($data);
+        $data=stripslashes($data);
+        $data=htmlspecialchars($data);
+        return $data;
+      }
+
+      $connection->close();
+  ?>
+
+  <div class="gen">
+    <div class="topSect topSectFix"><span class="top topSmall"><div id="left" class="leftFix"><p id="title" class="titleSmall" onclick="window.location.href='index.php'">SHOS</p></div>
+    <div id="right"><p class="menu menuSlideFix">&#8595;</p></div></span>
+    <div class="nav navFix"><div class="buttonCent">
+      <span class="button" onclick="window.location.href='index.php'"><p class="buttonTxt">Home</p></span>
+      <span class="button" onclick="window.location.href='about.php'"><p class="buttonTxt">About</p></span>
+      <span class="button" onclick="window.location.href='resources.html'"><p class="buttonTxt">Resources</p></span>
+    <!--<span class="button" onclick="window.location.href='forumSelect.php'"><p class="buttonTxt">Forum</p></span>-->
+      <span class="button" onclick="window.location.href='members.php'"><p class="buttonTxt">Members</p></span>
+    </div></div></div>
+  <div id="photoCont"><div id="backPhotoMem"></div>
+  <div id="intro"><div id="introCont">
+  <div class="loginTable"><p class="listTitle">Change Password</p>
+  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+      <div class="insideForm flexForm"><div class="blockForm">
+        <!--<div class="loginRow"><label>Username:</label>
+        <input class="input" type="text" name="username"></div>-->
+
+        <div class="loginRow"><label>Email:</label>
+        <input class="input" type="text" name="email"></div>
+
+        <?php echo "<p class='statusForm'>". $formStatus . "</p>"; ?>
+
+        <div class="loginRowButton"><input class="submitButton" type="submit" name="password" value="Submit"></div>
+      </div>
+    </div></form>
+  </div>
+</div>
+
+<div class="spaceHolder">
+<div class="whiteBar"><div class="bottomTxt">
+  <p class="contactInfoBottom">Siblings Helping Other Siblings (SHOS)</p><p class="contactInfoBottom"> Email: laurencowell042502@gmail.com</p><p class="contactInfoBottom">Property of Lauren and Aiden Cowell</p>
+<p class="copyright">Made by Web Styles FL.</p></div></div></div></div></div></div>
+</body>
+<script>
+var arrow=document.getElementsByClassName("menu")[0];
+arrow.addEventListener("click", function(){menuSlide()});
+
+function menuSlide(){
+    var nav=document.getElementsByClassName("nav")[0];
+    if(nav.classList.contains("navTall")){
+      nav.classList.remove("navTall");
+      arrow.classList.remove("menuFix");
+      arrow.classList.add("menuRotateBack");
+    }
+    else{arrow.classList.remove("menuRotateBack");
+      arrow.classList.add("menuFix");
+      nav.classList.add("navTall");
+    }
+}
+</script>
+</html>

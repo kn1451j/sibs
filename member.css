@@ -1,0 +1,72 @@
+#introCont{
+  padding: 20px;
+  position: relative;
+  width: auto;
+}
+
+.insideForm{
+    width:100%;
+    align-items: center;
+}
+
+.loginTable{
+  position: relative;
+  display:block;
+  margin:0px;
+  z-index:115;
+  padding:15px;
+}
+
+
+.passwordButton{
+  margin: 0px;
+  margin-top: 10px;
+  margin-bottom:-20px;
+}
+
+@media only screen and (min-width: 850px){
+  .blockForm{
+    padding: 0px;
+    padding-top: 10px;
+  }
+
+  .flexForm{
+    justify-content: flex-start;
+  }
+
+  #introCont{
+    padding: 20px;}
+
+  .loginRow{
+    width:100%;
+    height: 75px;
+  }
+
+  .loginTable{
+    position: relative;
+    width:auto;
+    display:inline-block;
+    margin:10px;
+    padding:35px;
+  }
+
+  .listTitle{
+    text-align: left;
+  }
+
+  #whyCont, .rightTitle{
+    text-align: right;
+  }
+
+  .loginRowButton{
+    justify-content: flex-end;
+  }
+}
+
+.loginMod{
+  display: none;
+}
+
+.accountMod{
+  display: block;
+}

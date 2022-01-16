@@ -1,0 +1,335 @@
+.color{
+  background-color: red !important;
+}
+
+.backPhotoCont{
+  width:100%;
+  height:50vh;
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.backPhoto{
+  width:110%;
+  height: 110%;
+  object-fit: cover;
+  position: absolute;
+  top:-10px;left: -10px;
+  filter: blur(4px);
+}
+
+.titleCont{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  bottom:0px;
+  background: rgba(0,0,0,0.35);
+  align-items: center;
+}
+
+.title{
+  position: relative;
+  color:white;
+  font-family: Raleway;
+  font-size: 33px;
+  padding: 40px;
+  text-align: center;
+}
+
+.topicCont{
+  width: 80%;
+  height: auto;
+  background: white;
+  padding:30px;
+  border: 2px solid rgb(242,232,222);
+  position: relative;
+  margin: 40px auto;
+  left: 0px; right:0px;
+}
+
+.forumImageCont{
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  height: auto;
+  position: relative;
+}
+
+.forumImage{
+  object-fit: contain;
+  position: relative;
+  width: 90%;
+  max-height: 800px;
+  max-width: 800px;
+}
+
+.actForumImage{
+  position: relative;
+  padding:40px;
+  max-width: 100%;
+  max-height: 100%;
+  width:auto;
+  height: auto;
+  display: block;
+}
+
+.deleteButton{
+  background-color: white;
+  border: none;
+  color: rgba(240,190,113,1);
+  cursor: pointer;
+  padding: 0px;
+  font-size: 11px;
+  padding-top: 10px;
+  position: relative;
+  margin:0px;
+  font-family: Arial;
+}
+
+.commentButton{
+  color: blue;
+  font-size: 12px;
+  height: auto;
+  padding: 0px;
+  padding-top:10px;
+  width: auto;
+  max-width: 75px;
+  margin: 0px;
+}
+
+.reportButton{
+  font-size: 12px;
+  position: relative;
+}
+
+#statusForm{
+  color:rgba(32,56,100,1);
+  font-size:17px;
+  font-family: Pontano Sans;
+  width: 100%;
+  text-align: center;
+}
+
+label{
+  color:black;
+}
+
+.statusForm{
+  color: black;
+  padding-top: 20px;
+}
+
+.topicTitle{
+  color:black;
+  font-size:20px;
+  font-family: Pontano Sans;
+  background-color: white;
+  border: none;
+  padding: 0px;
+  display: inline-block;
+  padding:0px 20px;
+}
+
+.numPosts{
+  width: 80%;
+  overflow-wrap:break-word;
+  height: auto;
+  height: auto;
+  color:black;
+  font-size:15px;
+  font-family: Pontano Sans;
+  padding: 0px 20px;
+}
+
+.blockForm{
+  width: 100%;
+  max-width: auto;
+}
+
+.loginRow{
+  height: auto;
+  width: auto;
+}
+
+.blockForm{
+  margin: auto;
+  left: 0px;right: 0px;
+}
+
+.flash{
+  animation: 1s flashRed;
+  -webkit-animation:1s flashRed;
+}
+
+@keyframes flashRed {
+  0%{
+    color:black;
+  }
+  50%{
+    color:red;
+  }
+  100%{
+    color: black;
+  }
+}
+
+-webkit-@keyframes flashRed {
+  0%{
+    color:black;
+  }
+  50%{
+    color:red;
+  }
+  100%{
+    color: black;
+  }
+}
+
+.modOnly{
+  display: none;
+}
+
+.modOnlymod{
+  display: block;
+}
+
+.adminOnly{
+  display: none;
+}
+
+.adminOnlyadmin{
+  display: block;
+}
+
+.topicSect{
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.inputimg{
+    height: 20px;
+    object-fit: contain;
+}
+
+.likeCont{
+    width: auto;
+    display: flex;
+    padding: 10px;
+  }
+
+.likeCount{
+  position: relative;
+  font-size: 14px;
+  margin: auto 10px;
+  top:0px;bottom:0px;
+}
+
+.actDelete{
+  background-color: white;
+    border: none;
+    color: rgba(240,190,113,1);
+    position: relative;
+    padding: 5px 0px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.actReport{
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 200px){
+  .likeCont{
+    position: absolute;
+    right: 0px;
+    padding: 20px;
+    bottom:0px;
+  }
+}
+
+
+@media only screen and (min-width: 400px){
+
+  .deleteButton{
+    position: absolute;
+    right: 0px;
+    padding: 20px;
+    bottom:0px;
+  }
+
+  .commentButton{
+    left: 0px;
+    bottom:-10px;
+    position: relative;
+    padding: 0px;
+    padding-top:10px;
+  }
+
+  .actReport{
+    padding: 0px;
+    position: relative;
+  }
+
+  .reportButton{
+    bottom: auto;
+    top: 0px;
+    width: auto;
+    height: auto;
+    display: block;
+    position: absolute;
+    right: 0px;
+    padding: 20px;
+  }
+}
+
+.commentActivate{
+  display: none;
+}
+
+.commentVisible{
+  display: block;
+}
+
+.commentSubmitButton{
+  font-size: 14px;
+  height: 40px;
+  min-width: 150px;
+  width: 30%;
+  padding: 0px;
+}
+
+.commentCont{
+  background: transparent;
+  border: none;
+  position: relative;
+  padding: 0px;
+  margin-bottom:20px;
+  margin-top:-20px;
+  height:auto;
+  padding-bottom: 15px;
+}
+
+.commentBox{
+  background: white;
+  border: 2px solid rgb(242,232,222);
+  width: 80%;
+  margin:0px;
+  padding:30px;
+  height: auto;
+  position: relative;
+}
+
+.commentTitle{
+  font-size:16px;
+  margin: 10px 0px;
+}
+
+.commentText{
+  font-size:14px;
+  margin: 5px 0px;
+}

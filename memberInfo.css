@@ -1,0 +1,45 @@
+form{
+  width: 95%;
+  margin: 40px auto;
+  left:0px;
+  right: 0px;
+}
+
+table{
+  padding:20px;
+  position: relative;
+  font-family: Raleway;
+  font-size: 12px;
+  background: white;
+  border: 2px solid rgb(242,232,222);
+  height: auto;
+  overflow: auto;
+  min-width: 1000px;
+}
+
+tr{
+  height: 40px;
+  width: 100%;
+}
+
+th{
+  text-align: left;
+}
+
+.deleteButton{
+  background: white;
+  border: 2px solid;
+}
+
+.deleteButton:hover{
+  border: 2px solid red;
+  cursor: pointer;
+}
+
+.msgRow{
+  height:250px;
+}
+
+.msgRowIn{
+  height:175px;
+}
