@@ -1,5 +1,3 @@
- <?php
-    session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +32,7 @@
   }
 </style>
 <body>
-<?php
+<!--<?php
     $server = "localhost";
     $username = "u640129124_admin";
     $password= "accessDataAdmin";
@@ -232,19 +230,19 @@
       return $data;
     }
 
-?>
+?>-->
 <div class="gen">
-    <div class="topSect topSectFix"><span class="top topSmall"><div id="left" class="leftFix"><p id="title" class="titleSmall" onclick="window.location.href='index.php'">SHOS</p></div>
+    <div class="topSect topSectFix"><span class="top topSmall"><div id="left" class="leftFix"><p id="title" class="titleSmall" onclick="window.location.href='index.html'">SHOS</p></div>
     <div id="right"><p class="menu menuSlideFix">&#8595;</p></div></span>
   <div class="nav navFix"><div class="buttonCent">
-    <span class="button" onclick="window.location.href='index.php'"><p class="buttonTxt">Home</p></span>
-    <span class="button" onclick="window.location.href='about.php'"><p class="buttonTxt">About</p></span>
+    <span class="button" onclick="window.location.href='index.html'"><p class="buttonTxt">Home</p></span>
+    <span class="button" onclick="window.location.href='about.html'"><p class="buttonTxt">About</p></span>
     <span class="button" onclick="window.location.href='resources.html'"><p class="buttonTxt">Resources</p></span>
-    <span class="button" onclick="window.location.href='forumSelect.php'"><p class="buttonTxt">Forum</p></span>
-    <span class="button" onclick="window.location.href='members.php'"><p class="buttonTxt">Members</p></span>
+    <span class="button" onclick="window.location.href='forumSelect.html'"><p class="buttonTxt">Forum</p></span>
+    <span class="button" onclick="window.location.href='members.html'"><p class="buttonTxt">Members</p></span>
   </div></div></div>
-  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
-  <?php
+  <form method="post" action="" enctype="multipart/form-data">
+  <!--<?php
   $forumName=$_SESSION["forum"];
   $postInfo=mysqli_query($_SESSION['connection'],"SELECT id, first, message, video, image FROM {$forumName}");
   $count=0;
@@ -288,7 +286,7 @@
     echo '<div class="topicCont commentCont commentActivate"><div class="commentBox"><div class="loginRow"><label>Comment:</label><textarea name="message' . $id .'" style="width:100%; height:100%;"></textarea></div><div class="loginRowButton"><input class="submitButton commentSubmitButton" type="submit" name="CommentOn' . $id .'" value="Comment" /></div></div></div>';
   }
 
-  ?>
+  ?>-->
 
   <script>
   function activateComment(commentNum){
@@ -302,7 +300,6 @@
   </script>
 
   <div class="topicCont">
-      <?php echo "<p class='statusForm'>". $loginStatus . "</p>"; ?>
     <div class="notLogged">
        <div class="blockForm">
 
@@ -313,15 +310,13 @@
             <input type="file" name="fileToUpload" id="fileToUpload">
           </div>
 
-          <?php echo "<p class='statusForm'>". $formStatus . "</p>"; ?>
-
           <div class="loginRowButton"><input class="submitButton" type="submit" name="submit" value="Post" /></div>
           </div>
       </div>
     </div>
     </form>
 
-<?php
+<!--<?php
 
     if($_SESSION["status"]>1){
         echo "<script>
@@ -340,7 +335,7 @@
           }
         </script>";
       }
-?>
+?>-->
 
 
 <div class="spaceHolder">
