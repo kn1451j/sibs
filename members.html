@@ -21,7 +21,7 @@
   <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
 </head>
 <body>
-<?php
+<!--<?php
     $server = "localhost";
     $username = "u640129124_admin";
     $password= "accessDataAdmin";
@@ -92,21 +92,21 @@
     }
 
     $_SESSION['connection']->close();
-?>
+?>-->
 <div class="gen">
-  <div class="topSect topSectFix"><span class="top topSmall"><div id="left" class="leftFix"><p id="title" class="titleSmall" onclick="window.location.href='index.php'">SHOS</p></div>
+  <div class="topSect topSectFix"><span class="top topSmall"><div id="left" class="leftFix"><p id="title" class="titleSmall" onclick="window.location.href='index.html'">SHOS</p></div>
   <div id="right"><p class="menu menuSlideFix">&#8595;</p></div></span>
   <div class="nav navFix"><div class="buttonCent">
-    <span class="button" onclick="window.location.href='index.php'"><p class="buttonTxt">Home</p></span>
-    <span class="button" onclick="window.location.href='about.php'"><p class="buttonTxt">About</p></span>
+    <span class="button" onclick="window.location.href='index.html'"><p class="buttonTxt">Home</p></span>
+    <span class="button" onclick="window.location.href='about.html'"><p class="buttonTxt">About</p></span>
     <span class="button" onclick="window.location.href='resources.html'"><p class="buttonTxt">Resources</p></span>
-  <!--<span class="button" onclick="window.location.href='forumSelect.php'"><p class="buttonTxt">Forum</p></span>-->
-    <span class="button" onclick="window.location.href='members.php'"><p class="buttonTxt">Members</p></span>
+  <!--<span class="button" onclick="window.location.href='forumSelect.html'"><p class="buttonTxt">Forum</p></span>-->
+    <span class="button" onclick="window.location.href='members.html'"><p class="buttonTxt">Members</p></span>
   </div></div></div>
   <div id="photoCont"><div id="backPhotoMem"></div>
   <div id="intro"><div id="introCont">
   <div class="loginTable" id="loginTable"><p class="listTitle">Login</p>
-  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+  <form method="post" action="">
       <div class="insideForm flexForm"><div class="blockForm">
 
         <div class="loginRow"><label>Username:</label>
@@ -114,8 +114,6 @@
 
         <div class="loginRow"><label>Password:</label>
         <input class="input" type="password" name="password"></div>
-
-        <?php echo "<p class='statusForm'>". $formStatus . "</p>"; ?>
 
         <div class="loginRowButton changePass"><input class="submitButton passwordButton" type="submit" name="password" value="Forgot Password" /></div>
 
@@ -128,7 +126,7 @@
       <li class="listItem">Join a community of support</li>
       <li class="listItem">Recieve direct contacts for those in similar situations as you</li>
       <li class="listItem">Be a beneficiary of this non-profit organization that serves from personal experience</li>
-      <div class="loginRowButton"><p class="submitButton" onclick="window.location.href='signUp.php'">Sign Up</p></div>
+      <div class="loginRowButton"><p class="submitButton" onclick="window.location.href='signUp.html'">Sign Up</p></div>
     </ul></div>
   </div>
 
