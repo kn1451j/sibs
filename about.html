@@ -17,7 +17,7 @@
   <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
 </head>
 <body>
-  <?php
+  /*<?php
     $genEr="";
     if($_POST["submitCon"]){
       $emailCon=$_POST["emailCon"];
@@ -42,16 +42,16 @@
     function check($var){
       return trim(stripslashes(htmlspecialchars($var)));
     }
-     ?>
+     ?>*/
      <div class="gen">
        <div class="topSect topSectFix"><span class="top topSmall"><div id="left" class="leftFix"><p id="title" class="titleSmall" onclick="window.location.href='index.php'">SHOS</p></div>
        <div id="right"><p class="menu menuSlideFix">&#8595;</p></div></span>
        <div class="nav navFix"><div class="buttonCent">
-         <span class="button" onclick="window.location.href='index.php'"><p class="buttonTxt">Home</p></span>
-         <span class="button" onclick="window.location.href='about.php'"><p class="buttonTxt">About</p></span>
+         <span class="button" onclick="window.location.href='index.html'"><p class="buttonTxt">Home</p></span>
+         <span class="button" onclick="window.location.href='about.html'"><p class="buttonTxt">About</p></span>
          <span class="button" onclick="window.location.href='resources.html'"><p class="buttonTxt">Resources</p></span>
-         <!--<span class="button" onclick="window.location.href='forumSelect.php'"><p class="buttonTxt">Forum</p></span>-->
-         <span class="button" onclick="window.location.href='members.php'"><p class="buttonTxt">Members</p></span>
+         <!--<span class="button" onclick="window.location.href='forumSelect.html'"><p class="buttonTxt">Forum</p></span>-->
+         <span class="button" onclick="window.location.href='members.html'"><p class="buttonTxt">Members</p></span>
        </div></div></div>
     <div class="slideCont"><p class="slideTitle">About Us</p></div>
 
@@ -72,14 +72,13 @@
     <div class="contBox"><div class="backPhoto"><img class="backimage" src="images/people.jpg" /></div><div class="blueBox">
     <p class="title">Contact Us</p>
     <div class="table">
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"><div class="q">
+    <form method="post" action=""><div class="q">
     <div class="tr"><label>Name:</label>
     <input class="in" name="fromCon"></div>
     <div class="tr"><label>Email:</label>
     <input class="in" name="emailCon"></div>
     <div class="tr"><label>Message:</label>
     <textarea class="in" name="msgCon"></textarea></div>
-    <?php echo $genEr; ?>
     <div class="tr" style="display: flex;
     justify-content: center;"><input class="submit" type="submit" name="submitCon"></div></div>
     </form></div>
