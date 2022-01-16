@@ -1,5 +1,3 @@
-<?php
-    session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +18,7 @@
   <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
 </head>
 <body>
-  <?php
+  <!--<?php
       $server = "localhost";
       $username = "u640129124_admin";
       $password= "accessDataAdmin";
@@ -82,22 +80,22 @@
       }
 
       $connection->close();
-  ?>
+  ?>-->
 
   <div class="gen">
     <div class="topSect topSectFix"><span class="top topSmall"><div id="left" class="leftFix"><p id="title" class="titleSmall" onclick="window.location.href='index.php'">SHOS</p></div>
     <div id="right"><p class="menu menuSlideFix">&#8595;</p></div></span>
     <div class="nav navFix"><div class="buttonCent">
-      <span class="button" onclick="window.location.href='index.php'"><p class="buttonTxt">Home</p></span>
-      <span class="button" onclick="window.location.href='about.php'"><p class="buttonTxt">About</p></span>
+      <span class="button" onclick="window.location.href='index.html'"><p class="buttonTxt">Home</p></span>
+      <span class="button" onclick="window.location.href='about.html'"><p class="buttonTxt">About</p></span>
       <span class="button" onclick="window.location.href='resources.html'"><p class="buttonTxt">Resources</p></span>
-    <!--<span class="button" onclick="window.location.href='forumSelect.php'"><p class="buttonTxt">Forum</p></span>-->
-      <span class="button" onclick="window.location.href='members.php'"><p class="buttonTxt">Members</p></span>
+    <!--<span class="button" onclick="window.location.href='forumSelect.html'"><p class="buttonTxt">Forum</p></span>-->
+      <span class="button" onclick="window.location.href='members.html'"><p class="buttonTxt">Members</p></span>
     </div></div></div>
   <div id="photoCont"><div id="backPhotoMem"></div>
   <div id="intro"><div id="introCont">
   <div class="loginTable"><p class="listTitle">Change Password</p>
-  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+  <form method="post" action="">
       <div class="insideForm flexForm"><div class="blockForm">
         <div class="loginRow"><label>Current Password: </label>
         <input class="input" type="password" name="curPass"></div>
@@ -107,8 +105,6 @@
 
         <div class="loginRow"><label>Confirm Password:</label>
         <input class="input" type="password" name="confirmPassword"></div></div></div>
-
-        <?php echo "<p class='statusForm'>". $formStatus . "</p>"; ?>
 
         <div class="loginRowButton"><input class="submitButton" type="submit" name="submit"></div></form>
       </div>
