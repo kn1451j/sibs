@@ -18,7 +18,7 @@
   <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
 </head>
 <body>
-  <?php
+  /*<?php
     $genEr="";
     if($_POST["submitCon"]){
       $emailCon=$_POST["emailCon"];
@@ -43,16 +43,16 @@
     function check($var){
       return trim(stripslashes(htmlspecialchars($var)));
     }
-     ?>
+     ?>*/
      <div class="gen">
-       <div class="topSect"><span class="top"><div id="left" class=""><p id="title" class="" onclick="window.location.href='index.php'">SHOS</p></div>
+       <div class="topSect"><span class="top"><div id="left" class=""><p id="title" class="" onclick="window.location.href='index.html'">SHOS</p></div>
        <div id="right"><p class="menu">&#8595;</p></div></span>
        <div class="nav"><div class="buttonCent">
-         <span class="button" onclick="window.location.href='index.php'"><p class="buttonTxt">Home</p></span>
-         <span class="button" onclick="window.location.href='about.php'"><p class="buttonTxt">About</p></span>
+         <span class="button" onclick="window.location.href='index.html'"><p class="buttonTxt">Home</p></span>
+         <span class="button" onclick="window.location.href='about.html'"><p class="buttonTxt">About</p></span>
          <span class="button" onclick="window.location.href='resources.html'"><p class="buttonTxt">Resources</p></span>
-       <!--<span class="button" onclick="window.location.href='forumSelect.php'"><p class="buttonTxt">Forum</p></span>-->
-         <span class="button" onclick="window.location.href='members.php'"><p class="buttonTxt">Members</p></span>
+       <!--<span class="button" onclick="window.location.href='forumSelect.html'"><p class="buttonTxt">Forum</p></span>-->
+         <span class="button" onclick="window.location.href='members.html'"><p class="buttonTxt">Members</p></span>
        </div></div></div>
 <div class="body">
   <div id="backImg"></div>
@@ -63,16 +63,16 @@
 <div class="redBox noDisp"><div class="centerLine" id="genLine3"><div class="genLine"><p id="arrowDown">&#8595;</p></div></div><div class="circ"><img class="circImg" src="images/heart.png"></div><div class="circ"><img class="circImg" src="images/family.png"></div><div class="circ"><img class="circImg" src="images/edu.png"></div></div>
 
 <div class="buttonCent" id="nav2">
-  <span class="button middleBut" onclick="window.location.href='index.php'"><p class="buttonTxt middleTxt">Home</p></span>
-  <span class="button middleBut"  onclick="window.location.href='about.php'"><p class="buttonTxt middleTxt">About</p></span>
+  <span class="button middleBut" onclick="window.location.href='index.html'"><p class="buttonTxt middleTxt">Home</p></span>
+  <span class="button middleBut"  onclick="window.location.href='about.html'"><p class="buttonTxt middleTxt">About</p></span>
   <span class="button middleBut" onclick="window.location.href='resources.html'"><p class="buttonTxt middleTxt">Resources</p></span>
-  <span class="button middleBut" onclick="window.location.href='forumSelect.php'"><p class="buttonTxt middleTxt">Forum</p></span>
-  <span class="button middleBut" onclick="window.location.href='members.php'"><p class="buttonTxt middleTxt">Members</p></span>
+  <span class="button middleBut" onclick="window.location.href='forumSelect.html'"><p class="buttonTxt middleTxt">Forum</p></span>
+  <span class="button middleBut" onclick="window.location.href='membershtml'"><p class="buttonTxt middleTxt">Members</p></span>
 </div>
 <div class="contBox noDispOpposite"><div class="backPhoto"><img class="backimage" src="images/people.jpg" /></div><div class="blueBox">
 <p class="title">Contact Us</p>
 <div class="table">
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"><div class="q">
+<form method="post" action=""><div class="q">
 <div class="tr"><label>Name:</label>
 <input class="in" name="fromCon"></div>
 <div class="tr"><label>Email:</label>
