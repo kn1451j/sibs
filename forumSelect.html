@@ -1,5 +1,3 @@
-<?php
-    session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +18,7 @@
   <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
 </head>
 <body>
-  <?php
+  <!--<?php
       $server = "localhost";
       $username = "u640129124_admin";
       $password= "accessDataAdmin";
@@ -36,28 +34,28 @@
       if($_SESSION["logged"]==FALSE){
         $loginStatus="Please login to view the forum.";
       }
-  ?>
+  ?>-->
 <div class="gen">
-    <div class="topSect topSectFix"><span class="top topSmall"><div id="left" class="leftFix"><p id="title" class="titleSmall" onclick="window.location.href='index.php'">SHOS</p></div>
+    <div class="topSect topSectFix"><span class="top topSmall"><div id="left" class="leftFix"><p id="title" class="titleSmall" onclick="window.location.href='index.html'">SHOS</p></div>
     <div id="right"><p class="menu menuSlideFix">&#8595;</p></div></span>
   <div class="nav navFix"><div class="buttonCent">
-    <span class="button" onclick="window.location.href='index.php'"><p class="buttonTxt">Home</p></span>
-    <span class="button" onclick="window.location.href='about.php'"><p class="buttonTxt">About</p></span>
+    <span class="button" onclick="window.location.href='index.html'"><p class="buttonTxt">Home</p></span>
+    <span class="button" onclick="window.location.href='about.html'"><p class="buttonTxt">About</p></span>
     <span class="button" onclick="window.location.href='resources.html'"><p class="buttonTxt">Resources</p></span>
-  <span class="button" onclick="window.location.href='forumSelect.php'"><p class="buttonTxt">Forum</p></span>
-    <span class="button" onclick="window.location.href='members.php'"><p class="buttonTxt">Members</p></span>
+  <span class="button" onclick="window.location.href='forumSelect.html'"><p class="buttonTxt">Forum</p></span>
+    <span class="button" onclick="window.location.href='members.html'"><p class="buttonTxt">Members</p></span>
   </div></div></div>
 
   <div class="backPhotoCont"><img class="backPhoto" src="images/reachOut2.jpg"/><div class="titleCont"><p class="title">Siblings Helping Other Siblings Forum</p></div></div>
 
-    <?php
+    <!--<?php
     if($_SESSION["logged"]==FALSE){
     echo "<div class='topicCont'><p id='statusForm'>". $loginStatus . "</p></div>"; }
 
-    ?>
+    ?>-->
 
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-    <?php
+    <form method="post" action="">
+    <!--<?php
       $postInfo= mysqli_query($_SESSION['connection'], "SELECT id, name, showName FROM conversations");
       while($row=mysqli_fetch_row($postInfo)){
         $name=$row[1];
@@ -67,7 +65,7 @@
         $showName=$row[2];
         echo '<div class="topicCont"><input class="topicTitle" type="submit" name="submit" value="' . $showName .'" /><p class="numPosts">Number of Posts: ' . $number .'</p><input class="deleteButton adminOnly" type="submit" name="Delete' . $id .'" value="Delete" /></div>';
       }
-    ?>
+    ?>-->
     <div class="topicCont modOnly">
       <p class="topicTitle">Add Discussion</p>
       <div class="loginRow">
@@ -75,7 +73,7 @@
       <div class="loginRowButton"><input class="submitButton" type="submit" name="Add" value="Add" /></div></div>
   </form>
 
-<?php
+<!--<?php
     if($_SESSION["status"]>1){
         echo "<script>
           var modEl=document.getElementsByClassName('modOnly');
@@ -159,7 +157,7 @@
           </script>";
         }
       }
-      ?>
+      ?>-->
 
     <!--"' . $id .'"-->
 
